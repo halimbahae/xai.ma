@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XAi.ma</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body class="bg-[#121212] text-white min-h-screen flex items-center justify-center overflow-hidden">
+    <div id="particles-js" class="absolute inset-0 z-0"></div>
+    
+    <div class="relative z-10 text-center max-w-xl w-full px-4">
+        <h1 class="text-4xl md:text-5xl font-light text-[#00b98b] mb-4 animate-fade-in">XAi.ma</h1>
+        <h2 class="text-xl md:text-2xl font-light mb-8">The future of AI in Morocco</h2>
+        
+        <div class="w-full bg-[#333333] rounded-full overflow-hidden mb-4">
+            <div 
+                class="bg-[#00b98b] h-4 rounded-full w-[22%] animate-progress relative"
+            >
+                <span class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-sm">
+                    22%
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Ensure Particles.js is loaded before initializing
+        window.addEventListener('load', function() {
+            if (window.particlesJS) {
+                particlesJS('particles-js', {
+                    particles: {
+                        number: { value: 80, density: { enable: true, value_area: 800 } },
+                        color: { value: '#00b98b' },
+                        shape: { type: 'circle' },
+                        opacity: { value: 0.5, random: false },
+                        size: { value: 3, random: true },
+                        line_linked: { 
+                            enable: true, 
+                            distance: 150, 
+                            color: '#00b98b', 
+                            opacity: 0.4, 
+                            width: 1 
+                        },
+                        move: {
+                            enable: true,
+                            speed: 2,
+                            direction: 'none',
+                            random: false,
+                            straight: false,
+                            out_mode: 'out',
+                            bounce: false
+                        }
+                    },
+                    interactivity: {
+                        detect_on: 'canvas',
+                        events: {
+                            onhover: { enable: true, mode: 'repulse' },
+                            onclick: { enable: true, mode: 'push' },
+                            resize: true
+                        },
+                        modes: {
+                            repulse: { distance: 100, duration: 0.4 },
+                            push: { particles_nb: 4 }
+                        }
+                    },
+                    retina_detect: true
+                });
+            } else {
+                console.error('Particles.js library not loaded');
+            }
+        });
+    </script>
+</body>
+</html>
